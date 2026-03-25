@@ -42,7 +42,12 @@ CUDA GPU miner.
 
 ## HiveOS
 
-Create a **Custom Miner** flight sheet. Set **Installation URL** to the tarball link below.
+Create a **Custom Miner** flight sheet.
+
+**Installation URL:**
+```
+https://github.com/shatll-s/nekominer-release/releases/download/v0.5.8/nekominer-hiveos-0.5.8.tar.gz
+```
 
 **Extra config arguments:** `-a dutahash` or `-a blake3`
 
@@ -57,7 +62,7 @@ Create a **Custom Miner** flight sheet. Set **Installation URL** to the tarball 
     "miner": "custom",
     "miner_config": {
       "url": "ssl://ninjaraider.com:44821",
-      "miner": "nekominer",
+      "miner": "nekominer-hiveos",
       "template": "%WAL%.%WORKER_NAME%",
       "install_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.5.8/nekominer-hiveos-0.5.8.tar.gz",
       "user_config": "-a dutahash"
@@ -78,7 +83,7 @@ Create a **Custom Miner** flight sheet. Set **Installation URL** to the tarball 
     "miner": "custom",
     "miner_config": {
       "url": "ssl://ninjaraider.com:44811",
-      "miner": "nekominer",
+      "miner": "nekominer-hiveos",
       "template": "%WAL%.%WORKER_NAME%",
       "install_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.5.8/nekominer-hiveos-0.5.8.tar.gz",
       "user_config": "-a blake3"
@@ -90,7 +95,14 @@ Create a **Custom Miner** flight sheet. Set **Installation URL** to the tarball 
 
 ## os.dog
 
-Select **custom** miner in profile settings. Set algo in extra arguments.
+Select **custom** miner in profile settings.
+
+**Installation URL:**
+```
+https://github.com/shatll-s/nekominer-release/releases/download/v0.5.8/nekominer-osdog-0.5.8.tar.gz
+```
+
+Set algo in extra arguments: `-a dutahash` or `-a blake3`
 
 <details>
 <summary>DUTA profile</summary>
