@@ -21,6 +21,7 @@ CUDA GPU miner.
 
 | GPU | v4 (current) | v3 (reference) |
 |-----|-------------|----------------|
+| RTX 5090 | ~416 KH/s | — |
 | RTX 4080 Laptop | ~50 KH/s | ~3.5 MH/s |
 | RTX 3070 Ti Laptop | ~36 KH/s | ~3.0 MH/s |
 | RTX 3070 | ~41 KH/s | ~3.0 MH/s |
