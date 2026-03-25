@@ -90,7 +90,7 @@ Create a **Custom Miner** flight sheet. Set **Installation URL** to the tarball 
 
 ## os.dog
 
-Install as custom miner. Set algo in extra arguments.
+Select **custom** miner in profile settings. Set algo in extra arguments.
 
 <details>
 <summary>DUTA profile</summary>
