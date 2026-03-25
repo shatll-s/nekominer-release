@@ -21,8 +21,8 @@ CUDA GPU miner.
 
 | GPU | v4 (current) | v3 (reference) |
 |-----|-------------|----------------|
-| RTX 4080 | ~50 KH/s | ~3.5 MH/s |
-| RTX 3070 Ti | ~36 KH/s | ~3.0 MH/s |
+| RTX 4080 Laptop | ~50 KH/s | ~3.5 MH/s |
+| RTX 3070 Ti Laptop | ~36 KH/s | ~3.0 MH/s |
 | RTX 3070 | ~41 KH/s | ~3.0 MH/s |
 
 ### BLAKE3
@@ -35,31 +35,20 @@ CUDA GPU miner.
 
 ```bash
 ./nekominer -a dutahash -o ssl://pool:port -u wallet.worker
-
 ./nekominer -a blake3 -o pool:port -u wallet.worker
-
-# Select GPUs
-./nekominer -a dutahash -o ssl://pool:port -u wallet.worker -d 0,1,2
-
-# Benchmark
 ./nekominer -a dutahash --benchmark
+./nekominer --help
 ```
 
 ## HiveOS
 
-Create a **Custom Miner** flight sheet.
+Create a **Custom Miner** flight sheet. Set **Installation URL** to the tarball link below.
 
-**Installation URL:**
-```
-https://github.com/shatll-s/nekominer-release/releases/download/v0.5.8/nekominer-hiveos-0.5.8.tar.gz
-```
+**Extra config arguments:** `-a dutahash` or `-a blake3`
 
-**Extra config arguments:**
-```
--a dutahash
-```
+<details>
+<summary>DUTA flight sheet</summary>
 
-Example flight sheet JSON:
 ```json
 {
   "name": "DUTA nekominer",
@@ -76,12 +65,36 @@ Example flight sheet JSON:
   }]
 }
 ```
+</details>
+
+<details>
+<summary>QADO flight sheet</summary>
+
+```json
+{
+  "name": "QADO nekominer",
+  "items": [{
+    "coin": "QADO",
+    "miner": "custom",
+    "miner_config": {
+      "url": "ssl://ninjaraider.com:44811",
+      "miner": "nekominer",
+      "template": "%WAL%.%WORKER_NAME%",
+      "install_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.5.8/nekominer-hiveos-0.5.8.tar.gz",
+      "user_config": "-a blake3"
+    }
+  }]
+}
+```
+</details>
 
 ## os.dog
 
-Install as custom miner.
+Install as custom miner. Set algo in extra arguments.
 
-Example profile JSON:
+<details>
+<summary>DUTA profile</summary>
+
 ```json
 {
   "name": "DUTA nekominer",
@@ -96,6 +109,26 @@ Example profile JSON:
   "custom_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.5.8/nekominer-osdog-0.5.8.tar.gz"
 }
 ```
+</details>
+
+<details>
+<summary>QADO profile</summary>
+
+```json
+{
+  "name": "QADO nekominer",
+  "coin": "custom",
+  "customCoin": "QADO",
+  "wallet": "<your_qado_address>",
+  "template": "$ADDRESS.$WORKER",
+  "pool": "ssl://ninjaraider.com:44811",
+  "miner": "custom",
+  "addition": "-a blake3",
+  "fork": "latest",
+  "custom_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.5.8/nekominer-osdog-0.5.8.tar.gz"
+}
+```
+</details>
 
 ## Requirements
 
