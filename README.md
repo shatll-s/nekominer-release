@@ -1,6 +1,6 @@
 # nekominer
 
-CUDA GPU miner for memory-hard PoW algorithms.
+CUDA GPU miner.
 
 ```
   /\_/\
@@ -10,32 +10,22 @@ CUDA GPU miner for memory-hard PoW algorithms.
 
 ## Supported Algorithms
 
-| Algorithm | Coin | Pool | Status |
-|-----------|------|------|--------|
-| `dutahash` | DUTA (Dutago) | Monero-style stratum | Active |
-| `blake3` | QADO (Qado) | Bitcoin-style stratum | Active |
-
-DUTAHash auto-switches between v3 (height < 5400) and v4 (height >= 5400).
+| Algorithm | Coin | Status |
+|-----------|------|--------|
+| `dutahash` | DUTA (Dutago) | Active |
+| `blake3` | QADO (Qado) | Active |
 
 ## Benchmarks
 
-### DUTAHash v4 (current)
+### DUTAHash
 
-| GPU | Hashrate | VRAM Used |
-|-----|----------|-----------|
-| RTX 4080 | ~50 KH/s | ~2.3 GB |
-| RTX 3070 Ti | ~36 KH/s | ~2.3 GB |
-| RTX 3070 | ~41 KH/s | ~2.3 GB |
-| RTX 3060 | ~25 KH/s | ~2.3 GB |
+| GPU | v4 (current) | v3 (reference) |
+|-----|-------------|----------------|
+| RTX 4080 | ~50 KH/s | ~3.5 MH/s |
+| RTX 3070 Ti | ~36 KH/s | ~3.0 MH/s |
+| RTX 3070 | ~41 KH/s | ~3.0 MH/s |
 
-### DUTAHash v3 (legacy, height < 5400)
-
-| GPU | Hashrate |
-|-----|----------|
-| RTX 4080 | ~3.5 MH/s |
-| RTX 3070 | ~3.0 MH/s |
-
-### BLAKE3 (Qado)
+### BLAKE3
 
 | GPU | Hashrate |
 |-----|----------|
@@ -44,32 +34,68 @@ DUTAHash auto-switches between v3 (height < 5400) and v4 (height >= 5400).
 ## Usage
 
 ```bash
-# Basic
-./nekominer -a dutahash -o pool:port -u wallet.worker
-
-# With SSL
 ./nekominer -a dutahash -o ssl://pool:port -u wallet.worker
 
+./nekominer -a blake3 -o pool:port -u wallet.worker
+
 # Select GPUs
-./nekominer -a dutahash -o pool:port -u wallet.worker -d 0,1,2
+./nekominer -a dutahash -o ssl://pool:port -u wallet.worker -d 0,1,2
 
-# Benchmark (no pool needed)
+# Benchmark
 ./nekominer -a dutahash --benchmark
-
-# All options
-./nekominer --help
 ```
 
 ## HiveOS
 
-1. Create **Custom Miner** flight sheet
-2. Set **Installation URL** to the latest release `.tar.gz`
-3. Set **Pool URL**, **Wallet/Template**
-4. In **Extra config arguments**: `-a dutahash` (or `-a blake3`)
+Create a **Custom Miner** flight sheet.
+
+**Installation URL:**
+```
+https://github.com/shatll-s/nekominer-release/releases/download/v0.5.8/nekominer-hiveos-0.5.8.tar.gz
+```
+
+**Extra config arguments:**
+```
+-a dutahash
+```
+
+Example flight sheet JSON:
+```json
+{
+  "name": "DUTA nekominer",
+  "items": [{
+    "coin": "DUTA",
+    "miner": "custom",
+    "miner_config": {
+      "url": "ssl://ninjaraider.com:44821",
+      "miner": "nekominer",
+      "template": "%WAL%.%WORKER_NAME%",
+      "install_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.5.8/nekominer-hiveos-0.5.8.tar.gz",
+      "user_config": "-a dutahash"
+    }
+  }]
+}
+```
 
 ## os.dog
 
-Install as custom miner. Set algo in profile settings.
+Install as custom miner.
+
+Example profile JSON:
+```json
+{
+  "name": "DUTA nekominer",
+  "coin": "custom",
+  "customCoin": "DUTA",
+  "wallet": "<your_duta_address>",
+  "template": "$ADDRESS.$WORKER",
+  "pool": "ssl://ninjaraider.com:44821",
+  "miner": "custom",
+  "addition": "-a dutahash",
+  "fork": "latest",
+  "custom_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.5.8/nekominer-osdog-0.5.8.tar.gz"
+}
+```
 
 ## Requirements
 
@@ -79,4 +105,4 @@ Install as custom miner. Set algo in profile settings.
 
 ## Downloads
 
-See [Releases](../../releases) for latest binaries.
+See [Releases](../../releases).
