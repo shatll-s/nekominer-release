@@ -24,13 +24,15 @@ Actual hashrate depends on overclock and power limit.
 
 | GPU | Hashrate |
 |-----|----------|
-| RTX 3090 | up to 68 KH/s |
-| RTX 3080 Ti | up to 70 KH/s |
-| RTX 3070 Ti | up to 50 KH/s |
+| RTX 5090 | up to 182 KH/s |
+| RTX 5070 Ti | up to 101 KH/s |
+| RTX 3090 | up to 84 KH/s |
+| RTX 3080 Ti | up to 84 KH/s |
+| RTX 3070 Ti | up to 55 KH/s |
 | RTX 3070 | up to 48 KH/s |
 | RTX 3070 Ti Laptop | up to 44 KH/s |
 | RTX 3070 Laptop | up to 42 KH/s |
-| CMP 50HX | up to 30 KH/s |
+| CMP 50HX | up to 36 KH/s |
 
 ### VecnoHash
 
