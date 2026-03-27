@@ -41,8 +41,9 @@ CUDA GPU miner.
 ## Usage
 
 ```bash
-./nekominer -a dutahash -o ssl://pool:port -u wallet.worker
-./nekominer -a blake3 -o pool:port -u wallet.worker
+./nekominer -a dutahash -o ssl://ninjaraider.com:44821 -u wallet.worker
+./nekominer -a blake3 -o ssl://ninjaraider.com:44811 -u wallet.worker
+./nekominer -a vecnohash -o ninjaraider.com:44700 -u wallet.worker
 ./nekominer -a dutahash --benchmark
 ./nekominer --help
 ```
