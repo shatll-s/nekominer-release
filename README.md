@@ -57,7 +57,7 @@ Create a **Custom Miner** flight sheet.
 
 **Installation URL:**
 ```
-https://github.com/shatll-s/nekominer-release/releases/download/v0.6.0/nekominer-hiveos-0.6.0.tar.gz
+https://github.com/shatll-s/nekominer-release/releases/download/v0.6.1/nekominer-hiveos-0.6.1.tar.gz
 ```
 
 **Extra config arguments:** `-a dutahash` or `-a blake3`
@@ -75,7 +75,7 @@ https://github.com/shatll-s/nekominer-release/releases/download/v0.6.0/nekominer
       "url": "ssl://ninjaraider.com:44821",
       "miner": "nekominer-hiveos",
       "template": "%WAL%.%WORKER_NAME%",
-      "install_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.6.0/nekominer-hiveos-0.6.0.tar.gz",
+      "install_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.6.1/nekominer-hiveos-0.6.1.tar.gz",
       "user_config": "-a dutahash"
     }
   }]
@@ -96,7 +96,7 @@ https://github.com/shatll-s/nekominer-release/releases/download/v0.6.0/nekominer
       "url": "ssl://ninjaraider.com:44811",
       "miner": "nekominer-hiveos",
       "template": "%WAL%.%WORKER_NAME%",
-      "install_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.6.0/nekominer-hiveos-0.6.0.tar.gz",
+      "install_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.6.1/nekominer-hiveos-0.6.1.tar.gz",
       "user_config": "-a blake3"
     }
   }]
@@ -110,7 +110,7 @@ Select **custom** miner in profile settings.
 
 **Installation URL:**
 ```
-https://github.com/shatll-s/nekominer-release/releases/download/v0.6.0/nekominer-osdog-0.6.0.tar.gz
+https://github.com/shatll-s/nekominer-release/releases/download/v0.6.1/nekominer-osdog-0.6.1.tar.gz
 ```
 
 Set algo in extra arguments: `-a dutahash` or `-a blake3`
@@ -129,7 +129,7 @@ Set algo in extra arguments: `-a dutahash` or `-a blake3`
   "miner": "custom",
   "addition": "-a dutahash",
   "fork": "latest",
-  "custom_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.6.0/nekominer-osdog-0.6.0.tar.gz"
+  "custom_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.6.1/nekominer-osdog-0.6.1.tar.gz"
 }
 ```
 </details>
@@ -148,7 +148,7 @@ Set algo in extra arguments: `-a dutahash` or `-a blake3`
   "miner": "custom",
   "addition": "-a blake3",
   "fork": "latest",
-  "custom_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.6.0/nekominer-osdog-0.6.0.tar.gz"
+  "custom_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.6.1/nekominer-osdog-0.6.1.tar.gz"
 }
 ```
 </details>
