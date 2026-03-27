@@ -20,11 +20,17 @@ CUDA GPU miner.
 
 ### DUTAHash
 
-| GPU | v4 (current) | v3 (reference) |
-|-----|-------------|----------------|
-| RTX 4080 Laptop | ~50 KH/s | ~3.5 MH/s |
-| RTX 3070 Ti Laptop | ~36 KH/s | ~3.0 MH/s |
-| RTX 3070 | ~41 KH/s | ~3.0 MH/s |
+Actual hashrate depends on overclock and power limit.
+
+| GPU | Hashrate |
+|-----|----------|
+| RTX 3090 | up to 68 KH/s |
+| RTX 3080 Ti | up to 70 KH/s |
+| RTX 3070 Ti | up to 50 KH/s |
+| RTX 3070 | up to 48 KH/s |
+| RTX 3070 Ti Laptop | up to 44 KH/s |
+| RTX 3070 Laptop | up to 42 KH/s |
+| CMP 50HX | up to 30 KH/s |
 
 ### VecnoHash
 
@@ -57,7 +63,7 @@ Create a **Custom Miner** flight sheet.
 
 **Installation URL:**
 ```
-https://github.com/shatll-s/nekominer-release/releases/download/v0.6.1/nekominer-hiveos-0.6.1.tar.gz
+https://github.com/shatll-s/nekominer-release/releases/download/v0.6.2/nekominer-hiveos-0.6.2.tar.gz
 ```
 
 **Extra config arguments:** `-a dutahash` or `-a blake3`
@@ -75,7 +81,7 @@ https://github.com/shatll-s/nekominer-release/releases/download/v0.6.1/nekominer
       "url": "ssl://ninjaraider.com:44821",
       "miner": "nekominer-hiveos",
       "template": "%WAL%.%WORKER_NAME%",
-      "install_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.6.1/nekominer-hiveos-0.6.1.tar.gz",
+      "install_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.6.2/nekominer-hiveos-0.6.2.tar.gz",
       "user_config": "-a dutahash"
     }
   }]
@@ -96,7 +102,7 @@ https://github.com/shatll-s/nekominer-release/releases/download/v0.6.1/nekominer
       "url": "ssl://ninjaraider.com:44811",
       "miner": "nekominer-hiveos",
       "template": "%WAL%.%WORKER_NAME%",
-      "install_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.6.1/nekominer-hiveos-0.6.1.tar.gz",
+      "install_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.6.2/nekominer-hiveos-0.6.2.tar.gz",
       "user_config": "-a blake3"
     }
   }]
@@ -110,7 +116,7 @@ Select **custom** miner in profile settings.
 
 **Installation URL:**
 ```
-https://github.com/shatll-s/nekominer-release/releases/download/v0.6.1/nekominer-osdog-0.6.1.tar.gz
+https://github.com/shatll-s/nekominer-release/releases/download/v0.6.2/nekominer-osdog-0.6.2.tar.gz
 ```
 
 Set algo in extra arguments: `-a dutahash` or `-a blake3`
@@ -129,7 +135,7 @@ Set algo in extra arguments: `-a dutahash` or `-a blake3`
   "miner": "custom",
   "addition": "-a dutahash",
   "fork": "latest",
-  "custom_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.6.1/nekominer-osdog-0.6.1.tar.gz"
+  "custom_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.6.2/nekominer-osdog-0.6.2.tar.gz"
 }
 ```
 </details>
@@ -148,7 +154,7 @@ Set algo in extra arguments: `-a dutahash` or `-a blake3`
   "miner": "custom",
   "addition": "-a blake3",
   "fork": "latest",
-  "custom_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.6.1/nekominer-osdog-0.6.1.tar.gz"
+  "custom_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.6.2/nekominer-osdog-0.6.2.tar.gz"
 }
 ```
 </details>
