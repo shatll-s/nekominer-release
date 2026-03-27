@@ -10,10 +10,11 @@ CUDA GPU miner.
 
 ## Supported Algorithms
 
-| Algorithm | Coin | Status |
-|-----------|------|--------|
-| `dutahash` | DUTA (Dutago) | Active |
-| `blake3` | QADO (Qado) | Active |
+| Algorithm | Coin | Dev Fee |
+|-----------|------|---------|
+| `dutahash` | DUTA (Dutago) | 1% |
+| `blake3` | QADO (Qado) | 10% |
+| `vecnohash` | VE (Vecno) | 1% |
 
 ## Benchmarks
 
@@ -21,10 +22,15 @@ CUDA GPU miner.
 
 | GPU | v4 (current) | v3 (reference) |
 |-----|-------------|----------------|
-| RTX 5090 | ~416 KH/s | — |
 | RTX 4080 Laptop | ~50 KH/s | ~3.5 MH/s |
 | RTX 3070 Ti Laptop | ~36 KH/s | ~3.0 MH/s |
 | RTX 3070 | ~41 KH/s | ~3.0 MH/s |
+
+### VecnoHash
+
+| GPU | Hashrate |
+|-----|----------|
+| RTX 3070 | ~39 MH/s |
 
 ### BLAKE3
 
