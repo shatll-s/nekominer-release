@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.9.10] — 2026-04-25
+
+- Dev fee share submissions are no longer shown in console log or counted in the stats table.
+
 ## [0.9.9] — 2026-04-25
 
 - Startup banner shows dev fee percentage next to the algorithm name.
