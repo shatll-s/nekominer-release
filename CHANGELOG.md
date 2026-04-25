@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.9.10] — 2026-04-25
+## [0.9.12] — 2026-04-25
 
 - Added **Exfer** algorithm — Argon2id memory-hard PoW (~580 H/s on RTX 3070 Ti Laptop).
 
