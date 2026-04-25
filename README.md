@@ -54,7 +54,7 @@ Create a **Custom Miner** flight sheet.
 
 **Installation URL:**
 ```
-https://github.com/shatll-s/nekominer-release/releases/download/v0.9.7/nekominer-hiveos-0.9.7.tar.gz
+https://github.com/shatll-s/nekominer-release/releases/download/v0.9.8/nekominer-hiveos-0.9.8.tar.gz
 ```
 
 **Extra config arguments:** `-a blake3`, `-a vecnohash`, or `-a exfer`
@@ -72,7 +72,7 @@ https://github.com/shatll-s/nekominer-release/releases/download/v0.9.7/nekominer
       "url": "ssl://ninjaraider.com:44811",
       "miner": "nekominer-hiveos",
       "template": "%WAL%.%WORKER_NAME%",
-      "install_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.9.7/nekominer-hiveos-0.9.7.tar.gz",
+      "install_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.9.8/nekominer-hiveos-0.9.8.tar.gz",
       "user_config": "-a blake3"
     }
   }]
@@ -93,7 +93,7 @@ https://github.com/shatll-s/nekominer-release/releases/download/v0.9.7/nekominer
       "url": "ssl://ninjaraider.com:44911",
       "miner": "nekominer-hiveos",
       "template": "%WAL%.%WORKER_NAME%",
-      "install_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.9.7/nekominer-hiveos-0.9.7.tar.gz",
+      "install_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.9.8/nekominer-hiveos-0.9.8.tar.gz",
       "user_config": "-a exfer"
     }
   }]
@@ -107,7 +107,7 @@ Select **custom** miner in profile settings.
 
 **Installation URL:**
 ```
-https://github.com/shatll-s/nekominer-release/releases/download/v0.9.7/nekominer-osdog-0.9.7.tar.gz
+https://github.com/shatll-s/nekominer-release/releases/download/v0.9.8/nekominer-osdog-0.9.8.tar.gz
 ```
 
 Set algo in extra arguments: `-a blake3`, `-a vecnohash`, or `-a exfer`
@@ -126,7 +126,7 @@ Set algo in extra arguments: `-a blake3`, `-a vecnohash`, or `-a exfer`
   "miner": "custom",
   "addition": "-a blake3",
   "fork": "latest",
-  "custom_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.9.7/nekominer-osdog-0.9.7.tar.gz"
+  "custom_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.9.8/nekominer-osdog-0.9.8.tar.gz"
 }
 ```
 </details>
@@ -145,7 +145,7 @@ Set algo in extra arguments: `-a blake3`, `-a vecnohash`, or `-a exfer`
   "miner": "custom",
   "addition": "-a exfer",
   "fork": "latest",
-  "custom_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.9.7/nekominer-osdog-0.9.7.tar.gz"
+  "custom_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.9.8/nekominer-osdog-0.9.8.tar.gz"
 }
 ```
 </details>
