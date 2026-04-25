@@ -12,27 +12,11 @@ CUDA GPU miner.
 
 | Algorithm | Coin | Dev Fee |
 |-----------|------|---------|
-| `dutahash` | DUTA (Dutago) | 1% |
 | `blake3` | QADO (Qado) | 10% |
 | `vecnohash` | VE (Vecno) | 1% |
+| `exfer` | EXFER (Exfer) | 5% |
 
 ## Benchmarks
-
-### DUTAHash
-
-Actual hashrate depends on overclock and power limit.
-
-| GPU | Hashrate |
-|-----|----------|
-| RTX 5090 | up to 182 KH/s |
-| RTX 5070 Ti | up to 101 KH/s |
-| RTX 3090 | up to 84 KH/s |
-| RTX 3080 Ti | up to 84 KH/s |
-| RTX 3070 Ti | up to 55 KH/s |
-| RTX 3070 | up to 48 KH/s |
-| RTX 3070 Ti Laptop | up to 44 KH/s |
-| RTX 3070 Laptop | up to 42 KH/s |
-| CMP 50HX | up to 36 KH/s |
 
 ### VecnoHash
 
@@ -46,16 +30,21 @@ Actual hashrate depends on overclock and power limit.
 |-----|----------|
 | RTX 3070 | ~4.3 GH/s |
 
+### Exfer (Argon2id m=64 MiB t=2 p=1)
+
+Memory-bound algorithm — hashrate scales with L2 cache size and memory bandwidth.
+
+| GPU | Hashrate |
+|-----|----------|
+| RTX 3070 Ti Laptop | ~580 H/s |
+
 ## Usage
 
 ```bash
-./nekominer -a dutahash -o ssl://ninjaraider.com:44821 -u wallet.worker
-./nekominer -a dutahash -o ssl://randomx.rplant.xyz:17093 -u wallet.worker
-
 ./nekominer -a blake3 -o ssl://ninjaraider.com:44811 -u wallet.worker
 ./nekominer -a vecnohash -o ninjaraider.com:44700 -u wallet.worker
+./nekominer -a exfer -o ssl://ninjaraider.com:44911 -u %ADDRESS%.%WORKER%
 
-./nekominer -a dutahash --benchmark
 ./nekominer --help
 ```
 
@@ -65,31 +54,10 @@ Create a **Custom Miner** flight sheet.
 
 **Installation URL:**
 ```
-https://github.com/shatll-s/nekominer-release/releases/download/v0.6.2/nekominer-hiveos-0.6.2.tar.gz
+https://github.com/shatll-s/nekominer-release/releases/download/v0.9.1/nekominer-hiveos-0.9.1.tar.gz
 ```
 
-**Extra config arguments:** `-a dutahash` or `-a blake3`
-
-<details>
-<summary>DUTA flight sheet</summary>
-
-```json
-{
-  "name": "DUTA nekominer",
-  "items": [{
-    "coin": "DUTA",
-    "miner": "custom",
-    "miner_config": {
-      "url": "ssl://ninjaraider.com:44821",
-      "miner": "nekominer-hiveos",
-      "template": "%WAL%.%WORKER_NAME%",
-      "install_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.6.2/nekominer-hiveos-0.6.2.tar.gz",
-      "user_config": "-a dutahash"
-    }
-  }]
-}
-```
-</details>
+**Extra config arguments:** `-a blake3`, `-a vecnohash`, or `-a exfer`
 
 <details>
 <summary>QADO flight sheet</summary>
@@ -104,8 +72,29 @@ https://github.com/shatll-s/nekominer-release/releases/download/v0.6.2/nekominer
       "url": "ssl://ninjaraider.com:44811",
       "miner": "nekominer-hiveos",
       "template": "%WAL%.%WORKER_NAME%",
-      "install_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.6.2/nekominer-hiveos-0.6.2.tar.gz",
+      "install_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.9.1/nekominer-hiveos-0.9.1.tar.gz",
       "user_config": "-a blake3"
+    }
+  }]
+}
+```
+</details>
+
+<details>
+<summary>EXFER flight sheet</summary>
+
+```json
+{
+  "name": "EXFER nekominer",
+  "items": [{
+    "coin": "EXFER",
+    "miner": "custom",
+    "miner_config": {
+      "url": "ssl://ninjaraider.com:44911",
+      "miner": "nekominer-hiveos",
+      "template": "%WAL%.%WORKER_NAME%",
+      "install_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.9.1/nekominer-hiveos-0.9.1.tar.gz",
+      "user_config": "-a exfer"
     }
   }]
 }
@@ -118,29 +107,10 @@ Select **custom** miner in profile settings.
 
 **Installation URL:**
 ```
-https://github.com/shatll-s/nekominer-release/releases/download/v0.6.2/nekominer-osdog-0.6.2.tar.gz
+https://github.com/shatll-s/nekominer-release/releases/download/v0.9.1/nekominer-osdog-0.9.1.tar.gz
 ```
 
-Set algo in extra arguments: `-a dutahash` or `-a blake3`
-
-<details>
-<summary>DUTA profile</summary>
-
-```json
-{
-  "name": "DUTA nekominer",
-  "coin": "custom",
-  "customCoin": "DUTA",
-  "wallet": "<your_address>",
-  "template": "$ADDRESS.$WORKER",
-  "pool": "ssl://ninjaraider.com:44821",
-  "miner": "custom",
-  "addition": "-a dutahash",
-  "fork": "latest",
-  "custom_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.6.2/nekominer-osdog-0.6.2.tar.gz"
-}
-```
-</details>
+Set algo in extra arguments: `-a blake3`, `-a vecnohash`, or `-a exfer`
 
 <details>
 <summary>QADO profile</summary>
@@ -156,7 +126,26 @@ Set algo in extra arguments: `-a dutahash` or `-a blake3`
   "miner": "custom",
   "addition": "-a blake3",
   "fork": "latest",
-  "custom_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.6.2/nekominer-osdog-0.6.2.tar.gz"
+  "custom_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.9.1/nekominer-osdog-0.9.1.tar.gz"
+}
+```
+</details>
+
+<details>
+<summary>EXFER profile</summary>
+
+```json
+{
+  "name": "EXFER nekominer",
+  "coin": "custom",
+  "customCoin": "EXFER",
+  "wallet": "<your_address>",
+  "template": "$ADDRESS.$WORKER",
+  "pool": "ssl://ninjaraider.com:44911",
+  "miner": "custom",
+  "addition": "-a exfer",
+  "fork": "latest",
+  "custom_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.9.1/nekominer-osdog-0.9.1.tar.gz"
 }
 ```
 </details>
