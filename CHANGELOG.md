@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.9.13] — 2026-04-25
+
+- Fixed high CPU load average on multi-GPU rigs (now correctly sleeps while waiting for GPU on all devices, not just the first).
+
 ## [0.9.12] — 2026-04-25
 
 - Added **Exfer** algorithm — Argon2id memory-hard PoW (~580 H/s on RTX 3070 Ti Laptop).
