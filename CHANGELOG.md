@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.9.9] — 2026-04-25
+
+- Startup banner shows dev fee percentage next to the algorithm name.
+- Devices list now reads "GPU 0" instead of just "0" (less ambiguous).
+- When a share is found, log shows its difficulty vs the pool difficulty (e.g. `diff=29343/2287376`).
+
 ## [0.9.8] — 2026-04-25
 
 - Stats table now shows current pool difficulty.
