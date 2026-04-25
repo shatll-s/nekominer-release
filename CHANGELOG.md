@@ -1,29 +1,6 @@
 # Changelog
 
-## [0.9.9] — 2026-04-25
-
-- Startup banner shows dev fee percentage next to the algorithm name.
-- Devices list now reads "GPU 0" instead of just "0" (less ambiguous).
-- When a share is found, log shows its difficulty vs the pool difficulty (e.g. `diff=29343/2287376`).
-
-## [0.9.8] — 2026-04-25
-
-- Stats table now shows current pool difficulty.
-
-## [0.9.3 — 0.9.7] — 2026-04-25
-
-- **Exfer:** added compatibility with BTC-style stratum pools (e.g. exfer.th0rn.space). Shares are now accepted on third-party Exfer pools.
-- Stats table: pool URL is now shown in the periodic status header.
-
-## [0.9.2] — 2026-04-25
-
-- Fixed Docker / HiveOS / os.dog packaged builds.
-
-## [0.9.1] — 2026-04-25
-
-- Removed TARON SEQUAL-256 algorithm (no longer supported).
-
-## [0.9.0] — 2026-04-25
+## [0.9.10] — 2026-04-25
 
 - Added **Exfer** algorithm — Argon2id memory-hard PoW (~580 H/s on RTX 3070 Ti Laptop).
 
