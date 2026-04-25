@@ -2,6 +2,11 @@
 
 All notable changes to nekominer.
 
+## [0.9.2] — 2026-04-25
+
+### Fixed
+- Docker build (missing libargon2 dep — production uses bundled implementation)
+
 ## [0.9.1] — 2026-04-25
 
 ### Removed
