@@ -2,6 +2,37 @@
 
 All notable changes to nekominer.
 
+## [0.9.7] — 2026-04-25
+
+### Fixed
+- Exfer stratum: extranonce1/extranonce2 byte ordering now matches pool
+  (verbatim hex bytes, LE byte hex in submit). Shares now accepted on
+  BTC-style Exfer pools.
+
+## [0.9.6] — 2026-04-25
+
+### Changed
+- Exfer nonce layout: extranonce2 in LOW bytes (offset 84..84+ext2_size),
+  extranonce1 in HIGH bytes per BTC stratum convention
+
+## [0.9.5] — 2026-04-25
+
+### Fixed
+- Stats table: pool URL now shown in periodic status header
+- Stats table: Total row column alignment (was off by 2 chars)
+
+## [0.9.4] — 2026-04-25
+
+### Added
+- Exfer: split share_target (set_difficulty) and network_target (notify)
+  so miners on share-difficulty pools no longer wait for full blocks
+
+## [0.9.3] — 2026-04-25
+
+### Added
+- Exfer: 5-parameter mining.submit (worker, job_id, ext2, ntime, nonce)
+  for compatibility with strict BTC-style stratum pools
+
 ## [0.9.2] — 2026-04-25
 
 ### Fixed
