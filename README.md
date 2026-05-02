@@ -109,6 +109,27 @@ https://github.com/shatll-s/nekominer-release/releases/download/v0.9.15/nekomine
 ```
 </details>
 
+<details>
+<summary>EXFER flight sheet (luckypool.io)</summary>
+
+```json
+{
+  "name": "EXFER nekominer (luckypool)",
+  "items": [{
+    "coin": "EXFER",
+    "miner": "custom",
+    "miner_config": {
+      "url": "ssl://exfer.luckypool.io:3336",
+      "miner": "nekominer-hiveos",
+      "template": "%WAL%.%WORKER_NAME%",
+      "install_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.9.15/nekominer-hiveos-0.9.15.tar.gz",
+      "user_config": "-a exfer"
+    }
+  }]
+}
+```
+</details>
+
 ## os.dog
 
 Select **custom** miner in profile settings.
