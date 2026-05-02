@@ -44,7 +44,7 @@ Memory-bound algorithm — hashrate scales with L2 cache size and memory bandwid
 ./nekominer -a blake3 -o ssl://ninjaraider.com:44811 -u wallet.worker
 ./nekominer -a vecnohash -o ninjaraider.com:44700 -u wallet.worker
 ./nekominer -a exfer -o ssl://ninjaraider.com:44911 -u %ADDRESS%.%WORKER%
-./nekominer -a exfer -o exfer.luckypool.io:3335 -u %ADDRESS%.%WORKER%
+./nekominer -a exfer -o ssl://exfer.luckypool.io:3336 -u %ADDRESS%.%WORKER%
 
 ./nekominer --help
 ```
@@ -54,7 +54,7 @@ Memory-bound algorithm — hashrate scales with L2 cache size and memory bandwid
 | Pool | Connection |
 |------|------------|
 | ninjaraider.com | `ssl://ninjaraider.com:44911` or `ninjaraider.com:44910` |
-| luckypool.io | `exfer.luckypool.io:3335` |
+| luckypool.io | `ssl://exfer.luckypool.io:3336` or `exfer.luckypool.io:3335` |
 
 ## HiveOS
 
