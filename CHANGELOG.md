@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.9.15] — 2026-05-02
+
+- Added **luckypool.io** compatibility for Exfer algorithm (auto-detects pool protocol).
+- Keryx (KHeavyHash) algorithm support.
+
 ## [0.9.13] — 2026-04-25
 
 - Fixed high CPU load average on multi-GPU rigs (now correctly sleeps while waiting for GPU on all devices, not just the first).
