@@ -43,7 +43,7 @@ Memory-bound algorithm — hashrate scales with L2 cache size and memory bandwid
 ```bash
 ./nekominer -a blake3 -o ssl://ninjaraider.com:44811 -u wallet.worker
 ./nekominer -a vecnohash -o ninjaraider.com:44700 -u wallet.worker
-./nekominer -a exfer -o ssl://ninjaraider.com:44911 -u %ADDRESS%.%WORKER%
+./nekominer -a exfer -o ssl://ninjaraider.com:44913 -u %ADDRESS%.%WORKER%
 ./nekominer -a exfer -o ssl://exfer.luckypool.io:3336 -u %ADDRESS%.%WORKER%
 
 ./nekominer --help
@@ -53,7 +53,7 @@ Memory-bound algorithm — hashrate scales with L2 cache size and memory bandwid
 
 | Pool | Connection |
 |------|------------|
-| ninjaraider.com | `ssl://ninjaraider.com:44911` or `ninjaraider.com:44910` |
+| ninjaraider.com | `ssl://ninjaraider.com:44913` or `ninjaraider.com:44912` |
 | luckypool.io | `ssl://exfer.luckypool.io:3336` or `exfer.luckypool.io:3335` |
 
 ## HiveOS
@@ -98,7 +98,7 @@ https://github.com/shatll-s/nekominer-release/releases/download/v0.9.19/nekomine
     "coin": "EXFER",
     "miner": "custom",
     "miner_config": {
-      "url": "ssl://ninjaraider.com:44911",
+      "url": "ssl://ninjaraider.com:44913",
       "miner": "nekominer-hiveos",
       "template": "%WAL%.%WORKER_NAME%",
       "install_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.9.19/nekominer-hiveos-0.9.19.tar.gz",
@@ -170,7 +170,7 @@ Set algo in extra arguments: `-a blake3`, `-a vecnohash`, or `-a exfer`
   "customCoin": "EXFER",
   "wallet": "<your_address>",
   "template": "$ADDRESS.$WORKER",
-  "pool": "ssl://ninjaraider.com:44911",
+  "pool": "ssl://ninjaraider.com:44913",
   "miner": "custom",
   "addition": "-a exfer",
   "fork": "latest",
