@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.9.19] — 2026-05-03
+
+- SMEM bank conflict swizzle for Exfer — **~814 H/s** on RTX 3070 Ti Laptop (+13% over 0.9.15).
+- Fixed VRAM out-of-memory on multi-GPU rigs.
+
 ## [0.9.15] — 2026-05-02
 
 - Added **luckypool.io** compatibility for Exfer algorithm (auto-detects pool protocol).
