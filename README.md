@@ -36,7 +36,7 @@ Memory-bound algorithm — hashrate scales with L2 cache size and memory bandwid
 
 | GPU | Hashrate |
 |-----|----------|
-| RTX 3070 Ti Laptop | ~814 H/s |
+| RTX 3070 Ti Laptop | ~827 H/s |
 
 ## Usage
 
