@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.11.22] — 2026-06-17
+## [0.11.23] — 2026-06-17
 
 - Added **BTX** algorithm — MatMul PoW with multi-pool support: ninjaraider.com (`--pool-proto ninja`, default), minebtx.com and bitminerpool.xyz (`--pool-proto minebtx`), AriaBrain at `stratum.ariabrain.com` (`--pool-proto aria`).
 - Added **Equihash (192,7)** algorithm — Ycash (YEC), Zcash-style PoW.
