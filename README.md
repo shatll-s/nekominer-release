@@ -77,6 +77,17 @@ Memory-bound algorithm — hashrate scales with L2 cache size and memory bandwid
 
 > On `--pool-proto ninja` (ninjaraider) the worker is part of the address (`address.worker`); `minebtx` and `aria` take the bare address plus `--worker <name>`.
 
+```bash
+# minebtx.com
+./nekominer -a btx -o minebtx.com:3333 -u <BTX_ADDRESS> --worker rig --pool-proto minebtx
+
+# bitminerpool.xyz (same minebtx protocol)
+./nekominer -a btx -o bitminerpool.xyz:3333 -u <BTX_ADDRESS> --worker rig --pool-proto minebtx
+
+# AriaBrain — mine on stratum.ariabrain.com:3940 (NOT pool.ariabrain.com)
+./nekominer -a btx -o stratum.ariabrain.com:3940 -u <BTX_ADDRESS> --worker rig --pool-proto aria
+```
+
 ## HiveOS
 
 Create a **Custom Miner** flight sheet.
@@ -87,27 +98,6 @@ https://github.com/shatll-s/nekominer-release/releases/download/v0.11.22/nekomin
 ```
 
 **Extra config arguments:** `-a blake3`, `-a vecnohash`, `-a exfer`, `-a equihash`, or `-a btx`
-
-<details>
-<summary>QADO flight sheet</summary>
-
-```json
-{
-  "name": "QADO nekominer",
-  "items": [{
-    "coin": "QADO",
-    "miner": "custom",
-    "miner_config": {
-      "url": "ssl://ninjaraider.com:44811",
-      "miner": "nekominer-hiveos",
-      "template": "%WAL%.%WORKER_NAME%",
-      "install_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.11.22/nekominer-hiveos-0.11.22.tar.gz",
-      "user_config": "-a blake3"
-    }
-  }]
-}
-```
-</details>
 
 <details>
 <summary>EXFER flight sheet</summary>
@@ -203,25 +193,6 @@ https://github.com/shatll-s/nekominer-release/releases/download/v0.11.22/nekomin
 ```
 
 Set algo in extra arguments: `-a blake3`, `-a vecnohash`, `-a exfer`, `-a equihash`, or `-a btx`
-
-<details>
-<summary>QADO profile</summary>
-
-```json
-{
-  "name": "QADO nekominer",
-  "coin": "custom",
-  "customCoin": "QADO",
-  "wallet": "<your_address>",
-  "template": "$ADDRESS.$WORKER",
-  "pool": "ssl://ninjaraider.com:44811",
-  "miner": "custom",
-  "addition": "-a blake3",
-  "fork": "latest",
-  "custom_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.11.22/nekominer-osdog-0.11.22.tar.gz"
-}
-```
-</details>
 
 <details>
 <summary>EXFER profile</summary>
