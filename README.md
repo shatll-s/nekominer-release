@@ -100,11 +100,11 @@ https://github.com/shatll-s/nekominer-release/releases/download/v0.11.22/nekomin
 **Extra config arguments:** `-a blake3`, `-a vecnohash`, `-a exfer`, `-a equihash`, or `-a btx`
 
 <details>
-<summary>EXFER flight sheet</summary>
+<summary>EXFER ninjaraider nekominer</summary>
 
 ```json
 {
-  "name": "EXFER nekominer",
+  "name": "EXFER ninjaraider nekominer",
   "items": [{
     "coin": "EXFER",
     "miner": "custom",
@@ -121,11 +121,11 @@ https://github.com/shatll-s/nekominer-release/releases/download/v0.11.22/nekomin
 </details>
 
 <details>
-<summary>EXFER flight sheet (luckypool.io)</summary>
+<summary>EXFER luckypool nekominer</summary>
 
 ```json
 {
-  "name": "EXFER nekominer (luckypool)",
+  "name": "EXFER luckypool nekominer",
   "items": [{
     "coin": "EXFER",
     "miner": "custom",
@@ -142,11 +142,11 @@ https://github.com/shatll-s/nekominer-release/releases/download/v0.11.22/nekomin
 </details>
 
 <details>
-<summary>Equihash flight sheet</summary>
+<summary>YEC ninjaraider nekominer</summary>
 
 ```json
 {
-  "name": "Equihash nekominer",
+  "name": "YEC ninjaraider nekominer",
   "items": [{
     "coin": "YEC",
     "miner": "custom",
@@ -163,11 +163,11 @@ https://github.com/shatll-s/nekominer-release/releases/download/v0.11.22/nekomin
 </details>
 
 <details>
-<summary>BTX flight sheet</summary>
+<summary>BTX ninjaraider nekominer</summary>
 
 ```json
 {
-  "name": "BTX nekominer",
+  "name": "BTX ninjaraider nekominer",
   "items": [{
     "coin": "BTX",
     "miner": "custom",
@@ -177,6 +177,69 @@ https://github.com/shatll-s/nekominer-release/releases/download/v0.11.22/nekomin
       "template": "%WAL%.%WORKER_NAME%",
       "install_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.11.22/nekominer-hiveos-0.11.22.tar.gz",
       "user_config": "-a btx"
+    }
+  }]
+}
+```
+</details>
+
+<details>
+<summary>BTX minebtx nekominer</summary>
+
+```json
+{
+  "name": "BTX minebtx nekominer",
+  "items": [{
+    "coin": "BTX",
+    "miner": "custom",
+    "miner_config": {
+      "url": "minebtx.com:3333",
+      "miner": "nekominer-hiveos",
+      "template": "%WAL%.%WORKER_NAME%",
+      "install_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.11.22/nekominer-hiveos-0.11.22.tar.gz",
+      "user_config": "-a btx --pool-proto minebtx"
+    }
+  }]
+}
+```
+</details>
+
+<details>
+<summary>BTX bitminerpool nekominer</summary>
+
+```json
+{
+  "name": "BTX bitminerpool nekominer",
+  "items": [{
+    "coin": "BTX",
+    "miner": "custom",
+    "miner_config": {
+      "url": "bitminerpool.xyz:3333",
+      "miner": "nekominer-hiveos",
+      "template": "%WAL%.%WORKER_NAME%",
+      "install_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.11.22/nekominer-hiveos-0.11.22.tar.gz",
+      "user_config": "-a btx --pool-proto minebtx"
+    }
+  }]
+}
+```
+</details>
+
+<details>
+<summary>BTX ariapool nekominer</summary>
+
+```json
+{
+  "name": "BTX ariapool nekominer",
+  "items": [{
+    "coin": "BTX",
+    "miner": "custom",
+    "miner_config": {
+      "url": "stratum.ariabrain.com:3940",
+      "miner": "nekominer-hiveos",
+      "template": "%WAL%",
+      "install_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.11.22/nekominer-hiveos-0.11.22.tar.gz",
+      "user_config": "-a btx --pool-proto aria --worker %WORKER_NAME%"
     }
   }]
 }
@@ -195,11 +258,11 @@ https://github.com/shatll-s/nekominer-release/releases/download/v0.11.22/nekomin
 Set algo in extra arguments: `-a blake3`, `-a vecnohash`, `-a exfer`, `-a equihash`, or `-a btx`
 
 <details>
-<summary>EXFER profile</summary>
+<summary>EXFER ninjaraider nekominer</summary>
 
 ```json
 {
-  "name": "EXFER nekominer",
+  "name": "EXFER ninjaraider nekominer",
   "coin": "custom",
   "customCoin": "EXFER",
   "wallet": "<your_address>",
@@ -214,11 +277,11 @@ Set algo in extra arguments: `-a blake3`, `-a vecnohash`, `-a exfer`, `-a equiha
 </details>
 
 <details>
-<summary>Equihash profile</summary>
+<summary>YEC ninjaraider nekominer</summary>
 
 ```json
 {
-  "name": "Equihash nekominer",
+  "name": "YEC ninjaraider nekominer",
   "coin": "custom",
   "customCoin": "YEC",
   "wallet": "<your_address>",
@@ -233,11 +296,11 @@ Set algo in extra arguments: `-a blake3`, `-a vecnohash`, `-a exfer`, `-a equiha
 </details>
 
 <details>
-<summary>BTX profile</summary>
+<summary>BTX ninjaraider nekominer</summary>
 
 ```json
 {
-  "name": "BTX nekominer",
+  "name": "BTX ninjaraider nekominer",
   "coin": "custom",
   "customCoin": "BTX",
   "wallet": "<your_address>",
@@ -245,6 +308,63 @@ Set algo in extra arguments: `-a blake3`, `-a vecnohash`, `-a exfer`, `-a equiha
   "pool": "ssl://ninjaraider.com:44921",
   "miner": "custom",
   "addition": "-a btx",
+  "fork": "latest",
+  "custom_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.11.22/nekominer-osdog-0.11.22.tar.gz"
+}
+```
+</details>
+
+<details>
+<summary>BTX minebtx nekominer</summary>
+
+```json
+{
+  "name": "BTX minebtx nekominer",
+  "coin": "custom",
+  "customCoin": "BTX",
+  "wallet": "<your_address>",
+  "template": "$ADDRESS.$WORKER",
+  "pool": "minebtx.com:3333",
+  "miner": "custom",
+  "addition": "-a btx --pool-proto minebtx",
+  "fork": "latest",
+  "custom_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.11.22/nekominer-osdog-0.11.22.tar.gz"
+}
+```
+</details>
+
+<details>
+<summary>BTX bitminerpool nekominer</summary>
+
+```json
+{
+  "name": "BTX bitminerpool nekominer",
+  "coin": "custom",
+  "customCoin": "BTX",
+  "wallet": "<your_address>",
+  "template": "$ADDRESS.$WORKER",
+  "pool": "bitminerpool.xyz:3333",
+  "miner": "custom",
+  "addition": "-a btx --pool-proto minebtx",
+  "fork": "latest",
+  "custom_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.11.22/nekominer-osdog-0.11.22.tar.gz"
+}
+```
+</details>
+
+<details>
+<summary>BTX ariapool nekominer</summary>
+
+```json
+{
+  "name": "BTX ariapool nekominer",
+  "coin": "custom",
+  "customCoin": "BTX",
+  "wallet": "<your_address>",
+  "template": "$ADDRESS",
+  "pool": "stratum.ariabrain.com:3940",
+  "miner": "custom",
+  "addition": "-a btx --pool-proto aria --worker $WORKER",
   "fork": "latest",
   "custom_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.11.22/nekominer-osdog-0.11.22.tar.gz"
 }
