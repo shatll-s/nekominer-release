@@ -49,8 +49,8 @@ Memory-bound algorithm — hashrate scales with L2 cache size and memory bandwid
 ## Usage
 
 ```bash
-./nekominer -a blake3 -o ssl://ninjaraider.com:44811 -u wallet.worker
-./nekominer -a vecnohash -o ssl://ninjaraider.com:44701 -u wallet.worker
+./nekominer -a blake3 -o ssl://ninjaraider.com:44811 -u %ADDRESS%.%WORKER%
+./nekominer -a vecnohash -o ssl://ninjaraider.com:44701 -u %ADDRESS%.%WORKER%
 ./nekominer -a exfer -o ssl://ninjaraider.com:44913 -u %ADDRESS%.%WORKER%
 ./nekominer -a exfer -o ssl://exfer.luckypool.io:3336 -u %ADDRESS%.%WORKER%
 ./nekominer -a equihash -o ssl://ninjaraider.com:44561 -u %ADDRESS%.%WORKER%
