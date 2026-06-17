@@ -100,6 +100,27 @@ https://github.com/shatll-s/nekominer-release/releases/download/v0.11.22/nekomin
 **Extra config arguments:** `-a blake3`, `-a vecnohash`, `-a exfer`, `-a equihash`, or `-a btx`
 
 <details>
+<summary>VECNO ninjaraider nekominer</summary>
+
+```json
+{
+  "name": "VECNO ninjaraider nekominer",
+  "items": [{
+    "coin": "VECNO",
+    "miner": "custom",
+    "miner_config": {
+      "url": "ssl://ninjaraider.com:44701",
+      "miner": "nekominer-hiveos",
+      "template": "%WAL%.%WORKER_NAME%",
+      "install_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.11.22/nekominer-hiveos-0.11.22.tar.gz",
+      "user_config": "-a vecnohash"
+    }
+  }]
+}
+```
+</details>
+
+<details>
 <summary>EXFER ninjaraider nekominer</summary>
 
 ```json
@@ -239,7 +260,7 @@ https://github.com/shatll-s/nekominer-release/releases/download/v0.11.22/nekomin
       "miner": "nekominer-hiveos",
       "template": "%WAL%",
       "install_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.11.22/nekominer-hiveos-0.11.22.tar.gz",
-      "user_config": "-a btx --pool-proto aria --worker %WORKER_NAME%"
+      "user_config": "-a btx --pool-proto aria --worker %WORKER%"
     }
   }]
 }
@@ -256,6 +277,25 @@ https://github.com/shatll-s/nekominer-release/releases/download/v0.11.22/nekomin
 ```
 
 Set algo in extra arguments: `-a blake3`, `-a vecnohash`, `-a exfer`, `-a equihash`, or `-a btx`
+
+<details>
+<summary>VECNO ninjaraider nekominer</summary>
+
+```json
+{
+  "name": "VECNO ninjaraider nekominer",
+  "coin": "custom",
+  "customCoin": "VECNO",
+  "wallet": "<your_address>",
+  "template": "$ADDRESS.$WORKER",
+  "pool": "ssl://ninjaraider.com:44701",
+  "miner": "custom",
+  "addition": "-a vecnohash",
+  "fork": "latest",
+  "custom_url": "https://github.com/shatll-s/nekominer-release/releases/download/v0.11.22/nekominer-osdog-0.11.22.tar.gz"
+}
+```
+</details>
 
 <details>
 <summary>EXFER ninjaraider nekominer</summary>
