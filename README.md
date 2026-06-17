@@ -16,6 +16,7 @@ CUDA GPU miner.
 | `equihash` | YEC (Ycash) | 2% |
 | `exfer` | EXFER (Exfer) | 10% |
 | `btx` | BTX | 10% |
+| `blake3` |  | 10% |
 
 ## Usage
 
