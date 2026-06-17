@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.11.22] — 2026-06-17
+
+- Added **BTX** algorithm — MatMul PoW with multi-pool support: ninjaraider.com (`--pool-proto ninja`, default), minebtx.com and bitminerpool.xyz (`--pool-proto minebtx`), AriaBrain at `stratum.ariabrain.com` (`--pool-proto aria`).
+- Added **Equihash (192,7)** algorithm — Ycash (YEC), Zcash-style PoW (~46.5 Sol/s on RTX 3070, fits in 8 GB VRAM).
+- VecnoHash **+17%** throughput (33.0 → 38.6 MH/s on RTX 3070): round-binning, larger autotune grid, header block0 precompute, zero-message-word folding, and ILP interleave.
+- Exfer: minor hashrate improvement.
+- **CPU load eliminated** — all algorithms now use blocking GPU sync (near-zero CPU usage / load average, frees host cores).
+
 ## [0.9.23] — 2026-05-09
 
 - Added Tesla P100 (sm_60) GPU support.
