@@ -49,8 +49,8 @@ Memory-bound algorithm — hashrate scales with L2 cache size and memory bandwid
 ## Usage
 
 ```bash
-./nekominer -a blake3 -o ssl://ninjaraider.com:44811 -u wallet.worker
-./nekominer -a vecnohash -o ssl://ninjaraider.com:44701 -u wallet.worker
+./nekominer -a blake3 -o ssl://ninjaraider.com:44811 -u %ADDRESS%.%WORKER%
+./nekominer -a vecnohash -o ssl://ninjaraider.com:44701 -u %ADDRESS%.%WORKER%
 ./nekominer -a exfer -o ssl://ninjaraider.com:44913 -u %ADDRESS%.%WORKER%
 ./nekominer -a exfer -o ssl://exfer.luckypool.io:3336 -u %ADDRESS%.%WORKER%
 ./nekominer -a equihash -o ssl://ninjaraider.com:44561 -u %ADDRESS%.%WORKER%
@@ -78,6 +78,9 @@ Memory-bound algorithm — hashrate scales with L2 cache size and memory bandwid
 > On `--pool-proto ninja` (ninjaraider) the worker is part of the address (`address.worker`); `minebtx` and `aria` take the bare address plus `--worker <name>`.
 
 ```bash
+# ninjaraider.com — primary pool (ninja proto, default; worker goes in the address)
+./nekominer -a btx -o ssl://ninjaraider.com:44921 -u <BTX_ADDRESS>.rig
+
 # minebtx.com
 ./nekominer -a btx -o minebtx.com:3333 -u <BTX_ADDRESS> --worker rig --pool-proto minebtx
 
