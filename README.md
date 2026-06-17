@@ -12,10 +12,10 @@ CUDA GPU miner.
 
 | Algorithm | Coin | Dev Fee |
 |-----------|------|---------|
-| `blake3` | QADO (Qado) | 10% |
 | `vecnohash` | VE (Vecno) | 1% |
-| `exfer` | EXFER (Exfer) | 10% |
 | `equihash` | YEC (Ycash) | 2% |
+| `blake3` | QADO (Qado) | 10% |
+| `exfer` | EXFER (Exfer) | 10% |
 | `btx` | BTX | 10% |
 
 ## Benchmarks
