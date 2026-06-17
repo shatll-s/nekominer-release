@@ -78,9 +78,6 @@ Memory-bound algorithm — hashrate scales with L2 cache size and memory bandwid
 > On `--pool-proto ninja` (ninjaraider) the worker is part of the address (`address.worker`); `minebtx` and `aria` take the bare address plus `--worker <name>`.
 
 ```bash
-# ninjaraider.com — primary pool (ninja proto, default; worker goes in the address)
-./nekominer -a btx -o ssl://ninjaraider.com:44921 -u <BTX_ADDRESS>.rig
-
 # minebtx.com
 ./nekominer -a btx -o minebtx.com:3333 -u <BTX_ADDRESS> --worker rig --pool-proto minebtx
 
