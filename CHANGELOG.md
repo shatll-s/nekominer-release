@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.11.25] — 2026-06-18
+
+- Added **Bitweb (BTE)** algorithm — Argon2id (m=1 MiB, t=3, p=1) memory-hard PoW; 1% dev fee. ~55 kH/s per RTX 3070 with memory OC (memory-bandwidth-bound — mem clock is the lever, core barely matters).
+
 ## [0.11.23] — 2026-06-17
 
 - Added **BTX** algorithm — MatMul PoW with multi-pool support: ninjaraider.com (`--pool-proto ninja`, default), minebtx.com and bitminerpool.xyz (`--pool-proto minebtx`), AriaBrain at `stratum.ariabrain.com` (`--pool-proto aria`).
