@@ -18,6 +18,22 @@ CUDA GPU miner.
 | `btx` | BTX | 10% |
 | `blake3` |  | 10% |
 
+## Benchmarks
+
+| Card | Algorithm | Coin | Hashrate | Core¹ | Mem² | Power |
+|------|-----------|------|----------|-------|------|-------|
+| RTX 3070 | `vecnohash` | VE (Vecno) | ~44 MH/s | 1710 +150 | stock | ~138 W |
+| RTX 3070 | `equihash` | YEC (Ycash) | ~51.5 Sol/s | 1710 +150 | stock | ~147 W |
+| RTX 3070 | `exfer` | EXFER | ~973 H/s | 1710 +150 | +2000 | ~119 W |
+| RTX 3070 | `btx` | BTX | ~6.1 kH/s³ | 1710 +150 | +2000 | ~137 W |
+| RTX 3070 | `blake3` | QADO | ~4.3 GH/s⁴ | — | — | — |
+
+<sub>¹ Core = locked SM clock + offset (MHz): lock at 1710, add +150 — holds the clock at lower voltage (less power).</sub><br>
+<sub>² Mem = GDDR6 transfer-rate offset: `stock` = no OC (boosts to ~6801), `+2000` = memory overclock.</sub><br>
+<sub>³ BTX: 6.1 kH/s solve rate (pool-reported); sigma-scan ≈ 20.4 MNonce/s.</sub><br>
+<sub>⁴ blake3 from earlier builds (OC not benchmarked).</sub><br>
+<sub>Per-card values; RTX 3070 rows = average of 8× (driver 590).</sub>
+
 ## Usage
 
 ```bash
@@ -41,10 +57,6 @@ and pick the algorithm in *Extra config arguments*. Ready-made per-pool flight s
 ---
 
 ## VecnoHash — VE (Vecno)
-
-| GPU | Hashrate |
-|-----|----------|
-| RTX 3070 | ~39 MH/s |
 
 ```bash
 ./nekominer -a vecnohash -o ssl://ninjaraider.com:44701 -u %ADDRESS%.%WORKER%
@@ -73,10 +85,6 @@ and pick the algorithm in *Extra config arguments*. Ready-made per-pool flight s
 
 ## Equihash — YEC (Ycash)
 
-| GPU | Hashrate |
-|-----|----------|
-| RTX 3070 | ~46.5 Sol/s |
-
 ```bash
 ./nekominer -a equihash -o ssl://ninjaraider.com:44561 -u %ADDRESS%.%WORKER%
 ```
@@ -104,11 +112,7 @@ and pick the algorithm in *Extra config arguments*. Ready-made per-pool flight s
 
 ## Exfer — EXFER
 
-Memory-bound (Argon2id m=64 MiB t=2 p=1) — hashrate scales with L2 cache size and memory bandwidth.
-
-| GPU | Hashrate |
-|-----|----------|
-| RTX 3070 Ti Laptop | ~827 H/s |
+Argon2id (m=64 MiB, t=2, p=1) memory-hard PoW.
 
 ```bash
 ./nekominer -a exfer -o ssl://ninjaraider.com:44913 -u %ADDRESS%.%WORKER%
@@ -163,10 +167,6 @@ Memory-bound (Argon2id m=64 MiB t=2 p=1) — hashrate scales with L2 cache size 
 </details>
 
 ## BTX
-
-| GPU | Hashrate |
-|-----|----------|
-| RTX 3070 | _TBD_ |
 
 `--pool-proto ninja` (ninjaraider, default) puts the worker in the address (`address.worker`); `minebtx` and `aria` take a bare address plus `--worker <name>`.
 
