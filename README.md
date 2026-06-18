@@ -13,10 +13,10 @@ CUDA GPU miner.
 | Algorithm | Coin | Dev Fee |
 |-----------|------|---------|
 | `vecnohash` | VE (Vecno) | 1% |
+| `bitweb` | BTE (Bitweb) | 1% |
 | `equihash` | YEC (Ycash) | 2% |
 | `exfer` | EXFER (Exfer) | 10% |
 | `btx` | BTX | 10% |
-| `bitweb` | BTE (Bitweb) | 1% |
 | `blake3` |  | 10% |
 
 ## Benchmarks
@@ -24,10 +24,10 @@ CUDA GPU miner.
 | Card | Algorithm | Coin | Hashrate | Core¹ | Mem² | Power |
 |------|-----------|------|----------|-------|------|-------|
 | RTX 3070 | `vecnohash` | VE (Vecno) | ~44 MH/s | 1710 +150 | stock | ~138 W |
+| RTX 3070 | `bitweb` | BTE (Bitweb) | ~55.4 kH/s⁵ | 1560 +210 | +2000 | ~122 W |
 | RTX 3070 | `equihash` | YEC (Ycash) | ~51.5 Sol/s | 1710 +150 | stock | ~147 W |
 | RTX 3070 | `exfer` | EXFER | ~973 H/s | 1710 +150 | +2000 | ~119 W |
 | RTX 3070 | `btx` | BTX | ~6.1 kH/s³ | 1710 +150 | +2000 | ~137 W |
-| RTX 3070 | `bitweb` | BTE (Bitweb) | ~55.4 kH/s⁵ | 1560 +210 | +2000 | ~122 W |
 | RTX 3070 | `blake3` | QADO | ~4.3 GH/s⁴ | — | — | — |
 
 <sub>¹ Core = locked SM clock + offset (MHz): lock at 1710, add +150 — holds the clock at lower voltage (less power).</sub><br>
