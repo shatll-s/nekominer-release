@@ -12,11 +12,11 @@ CUDA GPU miner.
 
 | Algorithm | Coin | Dev Fee |
 |-----------|------|---------|
+| `btx` | BTX | 1% |
 | `vecnohash` | VE (Vecno) | 1% |
 | `bitweb` | BTE (Bitweb) | 1% |
 | `equihash` | YEC (Ycash) | 2% |
 | `exfer` | EXFER (Exfer) | 10% |
-| `btx` | BTX | 10% |
 | `blake3` |  | 10% |
 
 ## Benchmarks
@@ -27,12 +27,12 @@ CUDA GPU miner.
 | RTX 3070 | `bitweb` | BTE (Bitweb) | ~55.4 kH/s⁵ | 1560 +210 | +2000 | ~122 W |
 | RTX 3070 | `equihash` | YEC (Ycash) | ~51.5 Sol/s | 1710 +150 | stock | ~147 W |
 | RTX 3070 | `exfer` | EXFER | ~973 H/s | 1710 +150 | +2000 | ~119 W |
-| RTX 3070 | `btx` | BTX | ~6.1 kH/s³ | 1710 +150 | +2000 | ~137 W |
+| RTX 3070 | `btx` | BTX | ~4.68 kH/s³ | 1710 +150 | +2000 | ~137 W |
 | RTX 3070 | `blake3` | QADO | ~4.3 GH/s⁴ | — | — | — |
 
 <sub>¹ Core = locked SM clock + offset (MHz): lock at 1710, add +150 — holds the clock at lower voltage (less power).</sub><br>
 <sub>² Mem = GDDR6 transfer-rate offset: `stock` = no OC (boosts to ~6801), `+2000` = memory overclock.</sub><br>
-<sub>³ BTX: 6.1 kH/s solve rate (pool-reported); sigma-scan ≈ 20.4 MNonce/s.</sub><br>
+<sub>³ BTX: 4.68 kH/s solve rate (pool-reported); sigma-scan ≈ 20.4 MNonce/s.</sub><br>
 <sub>⁴ blake3 from earlier builds (OC not benchmarked).</sub><br>
 <sub>⁵ bitweb: memory-bandwidth-bound — mem OC is the lever (~36 → 55 kH/s); core barely matters (+150 ≈ 0); 0 rejected.</sub><br>
 <sub>Per-card values; RTX 3070 rows = average of 8× (driver 590).</sub>

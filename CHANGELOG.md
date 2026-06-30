@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.11.27] — 2026-06-30
+
+- **BTX dev fee reduced from 10% to 1%.**
+- **BTX hashrate significantly improved.**
+
 ## [0.11.25] — 2026-06-18
 
 - Added **Bitweb (BTE)** algorithm — Argon2id (m=1 MiB, t=3, p=1) memory-hard PoW; 1% dev fee. ~55 kH/s per RTX 3070 with memory OC (memory-bandwidth-bound — mem clock is the lever, core barely matters).
