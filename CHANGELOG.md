@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.11.28] — 2026-06-30
+
+- **BTX hashrate further improved.**
+
 ## [0.11.27] — 2026-06-30
 
 - **BTX dev fee reduced from 10% to 1%.**
